@@ -439,7 +439,7 @@
                 }
                 axios({
                     method: 'post',
-                    url: window.location.hostname === 'localhost' ? 'http://localhost:8081/orcv2' : '//orcseven.com/api/orcv2',
+                    url: window.location.hostname === 'localhost' ? 'http://localhost:8081/orcv2' : 'https://orcseven.com/api/orcv2',
                     data: params
                 }).then(function(res){
                     debugger;
