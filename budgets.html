@@ -53,173 +53,385 @@
         gtag('config', 'UA-114904683-1');
         gtag('config', 'AW-815052766');
         gtag('config', 'AW-815052766/-Xf2CJG6sH4Q3u_ShAM', {
-             'phone_conversion_number': '913859014'
+             'phone_conversion_number': '914423370'
              });
 </script>
+<style>
+    html {
+        height: 100%;
+        overflow: hidden;
+    }
 
+    body {
+        height: 100%;
+        overflow: scroll;
+    }
+
+    .with-sticky-footer {
+        display: table;
+        height: 100%;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .sticky-footer {
+        display: table-row;
+        height: 1px;
+    }
+
+    #budgetSuccess {
+        display: none;
+    }
+    #budgetSuccessMsg {
+        color: #082119;
+        font-family: 'Ubuntu';
+        border-top: 1px dotted #5ec4c9;
+        padding-top: 0.5em;
+    }
+</style>
    </head>
    <body class="size-1140" style="background: none repeat scroll 0 0 #1398b9;">
+     <div class="with-sticky-footer">
       <!-- TOP NAV WITH LOGO -->
       <header>
-         <div id="topbar">
-            <div class="line">
-               <!--div class="s-12 m-6 l-6">
-                  <div class="social ">
-                      <a><i class="icon-facebook_circle"></i></a> <a><i class="icon-twitter_circle"></i></a> <a><i class="icon-google_plus_circle"></i></a> <a><i class="icon-instagram_circle"></i></a>
-                   </div>                  
-               </div-->
-               <div class="s-12 l-4 hide-s hide-m">
-                    <p class="callcenter">
-                    <a href="/#callback" class="text-white ">
-                        <i class="icon-sli-phone"></i>
-                        Nós ligamos de volta!
-                      </a> 
-                      </p>
-                      </div>
-                 <div class="s-12 l-8">
-                  <p class="callcenter right">
-                      <a href="tel:913859014" class="text-white">
-                        <i class="icon-sli-phone"></i>
-                        913859014
-                      </a>
-                      <span class="hide-s hide-m"> &nbsp;&nbsp; </span>
-                      <a href="tel:212415077" class="text-white hide-s hide-m">
-                          <i class="icon-sli-phone"></i>
-                          212415077
-                        </a>
-                      <span> &nbsp;&nbsp; </span>
-                      <a href="mailto:geral@safeclean.pt">
-                        <i class="icon-mail "></i>
-                        geral@safeclean.pt
-                      </a>
-                  </p>
+            <div id="topbar">
+               <div class="line">
+                  <!--div class="s-12 m-6 l-6">
+                     <div class="social ">
+                         <a><i class="icon-facebook_circle"></i></a> <a><i class="icon-twitter_circle"></i></a> <a><i class="icon-google_plus_circle"></i></a> <a><i class="icon-instagram_circle"></i></a>
+                      </div>                  
+                  </div-->
+                  <div class="s-12 l-4 hide-s hide-m">
+                       <p class="callcenter">
+                       <a href="/#callback" class="text-white ">
+                           <i class="icon-sli-phone"></i>
+                           Nós ligamos de volta!
+                         </a> 
+                         </p>
+                         </div>
+                    <div class="s-12 l-8">
+                     <p class="callcenter right">
+                          <a href="tel:914423370" class="text-white">
+                           <i class="icon-sli-phone"></i>
+                           914423370
+                         </a>
+                         <span class="hide-s hide-m"> &nbsp;&nbsp; </span>
+                         <a href="tel:212415077" class="text-white ">
+                             <i class="icon-sli-phone"></i>
+                             212415077
+                           </a>
+                         <span> &nbsp;&nbsp; </span>
+                         <a href="mailto:geral@safeclean.pt">
+                           <i class="icon-mail "></i>
+                           geral@safeclean.pt
+                         </a>
+                     </p>
+                  </div>
+               </div>  
+            </div> 
+            <nav>
+               <div class="line">
+                  <div class="s-12 l-3">
+                     <a href="index.html" class="logo">
+                       <img src="img/logo.png" alt="safeclean" class="logo center exp-brand">
+                     </a>
+                  </div>
+                  
+                  <div class="top-nav s-12 l-9">
+                     <p class="nav-text">menu</p>
+                     <ul class="right">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/#services">Serviços</a></li>
+                        <li class="active-item"><a href="/budgets.html">Orçamento</a></li>
+                        <li><a href="/#about-us">Empresa</a></li>
+                        <li><a href="/#contact">Contactos</a></li>
+                        <li><a href="/#callback"><i class="icon-sli-phone hide-s hide-m"></i><span class="hide-l">Ligamos de volta</span></a></li>
+                     </ul>
+                  </div>
                </div>
-            </div>  
-         </div> 
-         <nav>
-            <div class="line">
-               <div class="s-12 l-3">
-                  <a href="index.html" class="logo">
-                    <img src="img/logo.png" alt="safeclean" class="logo center exp-brand">
-                  </a>
+            </nav>
+         </header>  
+         <section>
+   
+           <div class="budgets">
+   
+               <div class="line">
+                   <h2 class="section-title">O seu orçamento à sua medida</h2>
+                   <h4 class="hide-s" style="text-align: center">Solicite um orçamento GRÁTIS e SEM COMPROMISSO</h4>
+                   <div class="line" id="budgetSuccess" >
+                           <div class="margin">
+                                <div class="s-4 center">
+                                    <section>
+                                        <img src="img/gmailsent.png" />
+                                        <h6 id="budgetSuccessMsg">O seu orçamento foi submetido com sucesso. </h6>
+                                    </section>
+                                    </div>
+                           </div>
+                       </div>
+                   <form class="customform" action="" id="budgetForm">
+                       <div class="line">
+                           <div class="margin">
+                               <div class="s-12 l-4">
+                                   <p class="text hide-s"><label>Nome </label></p>
+                                   <input name="budgetName" placeholder="Nome" title="Nome" type="text" />
+                               </div>
+                               <div class="s-12 l-5">
+                                   <p class="text hide-s"><label>Email </label></p>
+                                   <input name="budgetEmail" placeholder="Email" title="E-mail" type="email" />
+                               </div>
+                               <div class="s-12 l-3">
+                                   <p class="text hide-s"><label>Contacto </label></p>
+                                   <input name="budgetMobile" placeholder="Contacto" title="Telefone ou Telemovel" type="telf" />
+                               </div>
+                           </div>
+                       </div>
+                       <div class="line">
+                           <div class="margin">
+                               <div class="s-12 l-7">
+                                   <p class="text hide-s"><label>Morada </label></p>
+                                   <input name="budgetStreet" placeholder="Morada" title="Morada Completa" type="text" />
+                               </div>
+                               <div class="s-12 l-2">
+                                   <p class="text hide-s"><label>Nº Porta </label></p>
+                                   <input name="budgetPortNumber" placeholder="Nº Porta" title="Nº Porta" type="text" />
+                               </div>
+                               <div class="s-12 l-3">
+                                   <p class="text hide-s"><label>Cidade / Localidade </label></p>
+                                   <input name="budgetCity" placeholder="Cidade / Localidade" title="Cidade / Localidade" type="text" />
+                               </div>
+                           </div>
+                       </div>
+                       <div class="line">
+                           <div class="margin">
+                               <div class="s-12 l-3 ">
+                                   <p class="text hide-s"><label>Tipo de Limpeza</label></p>
+                                   <select form="select" name="budgetSeviceType">
+                                       <option value="LD">Limpeza doméstica</option>
+                                       <option value="LC">Limpeza de condomínios</option>
+                                       <option value="LE">Limpeza Escritórios</option>
+                                       <option value="LA">Limpeza Armazens</option>
+                                       <option value="LPO">Limpeza pós-obras</option>
+                                       <option value="LPM">Limpeza pré-mudanças</option>
+                                       <option value="LVF">Limpeza vidros/fachadas</option>
+                                   </select>
+                                   
+                               </div>
+                               <div class="s-6 l-2 " id="NFOCOS"> 
+                                   <p class="text hide-s"><label>Nº Focos</label></p>
+                                   <input name="budgetFocos" placeholder="Nº Focos" title="Nº Focos" type="text" />
+                               </div>
+                               <div class="s-12 l-2 " id="TIPOLOGIA">
+                                   <p class="text hide-s"><label>Tipologia</label></p>
+                                   <select form="select" name="budgetTipologiaSelect" >
+                                       <option value="T1">T1</option>
+                                       <option value="T2">T2</option>
+                                       <option value="T3L">T3</option>
+                                       <option value="T4">T4</option>
+                                       <option value="T5">T5</option>
+                                       <option value="T6">T6</option>
+                                       <option value="TT">Outra</option>
+                                   </select>                        
+                               </div>
+                               <div class="s-6 l-2 ">
+                                   <p class="text"><label>Outra Tipologia </label></p>
+                                   <input name="budgetTipologia" placeholder="Outra Tipologia " title="Outra Tipologia" type="text" />
+                               </div>
+                               
+                           </div>
+                       </div>
+   
+                       <div class="line">
+                           <div class="margin">
+                               <div class="s-6 l-2 ">
+                                   <p class="text hide-s"><label>Nº de Pisos </label></p>
+                                   <input name="budgetFloor" placeholder="Nº de Pisos" title="Nº de Pisos" type="number" />
+                               </div>
+                               <div class="s-6 l-2 ">
+                                   <p class="text hide-s"><label>Nº de Quartos </label></p>
+                                   <input name="budgetBedRooms" placeholder="Nº de Quartos" title="Nº de Quartos" type="number" />
+                               </div>
+                               <div class="s-6 l-2 ">
+                                   <p class="text hide-s"><label>Nº de Salas </label></p>
+                                   <input name="budgetRooms" placeholder="Nº de Salas" title="Nº de Salas" type="number" />
+                               </div>
+                               <div class="s-6 l-2 ">
+                                   <p class="text hide-s"><label>Nº Casas Banho </label></p>
+                                   <input name="budgetWc" placeholder="Nº Casas Banho" title="Nº Casas Banho" type="number" />
+                               </div>
+                               <div class="s-6 l-2 ">
+                                   <p class="text hide-s"><label>Area aprox. </label></p>
+                                   <input name="budgetArea" placeholder="Area aprox." title="Area aprox." type="text" />
+                               </div>
+                               <div class="s-6 l-2 ">
+                                   <p class="text hide-s"><label>Nº Janelas </label></p>
+                                   <input name="budgetWindows" placeholder="Nº Janelas" title="Nº Janelas" type="number" />
+                               </div>
+                           </div>
+                       </div>
+   
+                       <div class="line">
+                           <div class="margin">
+                               <div class="s-12">
+                                   <textarea placeholder="Observações" name="budgetObserva" rows="5"></textarea>
+                               </div>
+                           </div>
+                       </div>
+                       <div class="line">
+                           <div class="margin">
+                               <div class="s-12 l-3 right">
+                                       <button type="submit">Enviar Pedido</button>  
+                               </div>
+                           </div>
+                       </div>
+   
+                       <input name="budgetType" value="20" type="hidden" />          
+                       <input name="budgetDomain" value="" type="hidden" />        
+                   </form>
                </div>
-               
-               <div class="top-nav s-12 l-9">
-                  <p class="nav-text">menu</p>
-                  <ul class="right">
-                     <li><a href="/index.html">Home</a></li>
-                     <li><a href="/#services">Serviços</a></li>
-                     <li class="active-item"><a href="/budgets.html">Orçamento</a></li>
-                     <li><a href="/#about-us">Empresa</a></li>
-                     <li><a href="/#contact">Contactos</a></li>
-                     <li><a href="/#callback"><i class="icon-sli-phone hide-s hide-m"></i><span class="hide-l">Ligamos de volta</span></a></li>
-                  </ul>
-               </div>
+           </div>
+       </section>
+         <!-- FOOTER -->
+   
+       <div id="footer-content" class="sticky-footer">
+               <footer>
+                       <div class="line">
+                          <div class="s-12 l-6">
+                             <p>Todos os direitos reservados.</p>
+                          </div>
+                          <div class="s-12 l-6">
+                              <a class="right" href="//www.orcseven.com" title="Elaborado por orcseven Soluções IT [2018]. ">Elaborado por orcseven Soluções IT [2018]. </a>
+                          </div>
+                       </div>
+                    </footer>
             </div>
-         </nav>
-      </header>  
-      <section>
+     </div>  
 
-        <div class="budgets">
-            <div class="line">
-                <h2 class="section-title">Pedir um Orçamento</h2>
-                <h4 class="hide-s">Solicite um orçamento GRÁTIS e SEM COMPROMISSO</h4>
-                <form class="customform" action="">
-                    <div class="line">
-                        <div class="margin">
-                            <div class="s-12 l-4">
-                                <input name="budgetName" placeholder="Nome" title="Nome" type="text" />
-                            </div>
-                            <div class="s-12 l-5">
-                                <input name="budgetEmail" placeholder="Email" title="E-mail" type="email" />
-                            </div>
-                            <div class="s-12 l-3">
-                                <input name="budgetMobile" placeholder="Contacto" title="Telefone ou Telemovel" type="telf" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="margin">
-                            <div class="s-12 l-8">
-                                <input name="budgetStreet" placeholder="Morada" title="Morada Completa" type="text" />
-                            </div>
-                            <div class="s-12 l-4">
-                                <input name="budgetCity" placeholder="Cidade / Localidade" title="Cidade / Localidade" type="text" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="margin">
-                            <div class="s-12 l-4">
-                                <p class="text hide-s"><label>Tipo de Limpeza</label></p>
-                                <select form="select" name="budgetSeviceType">
-                                    <option value="LD">Limpeza doméstica</option>
-                                    <option value="LC">Limpeza de condomínios</option>
-                                    <option value="LCL">Limpeza comercial</option>
-                                    <option value="LPO">Limpeza pós-obras</option>
-                                    <option value="LPM">Limpeza pré-mudanças</option>
-                                    <option value="LVF">Limpeza vidros/fachadas</option></select>
-                                </select>
-                            </div>
-                            <div class="s-6 l-2">
-                                <p class="text hide-s"><label>Nº de Quartos </label></p>
-                                <input name="budgetBedRooms" placeholder="Nº de Quartos" title="Nº de Quartos" type="text" />
-                            </div>
-                            <div class="s-6 l-2">
-                                <p class="text hide-s"><label>Nº de Salas </label></p>
-                                <input name="budgetRooms" placeholder="Nº de Salas" title="Nº de Salas" type="text" />
-                            </div>
-                            <div class="s-6 l-2">
-                                <p class="text hide-s"><label>Nº Casas Banho </label></p>
-                                <input name="budgetWc" placeholder="Nº Casas Banho" title="Nº Casas Banho" type="text" />
-                            </div>
-                            <div class="s-6 l-2">
-                                <p class="text hide-s"><label>Area aprox. </label></p>
-                                <input name="budgetArea" placeholder="Area aprox." title="Area aprox." type="text" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="margin">
-                            <div class="s-12">
-                                <textarea placeholder="Observações" name="budgetObserva" rows="5"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="line">
-                        <div class="margin">
-                            <div class="s-12 l-3 right">
-                                    <button type="submit">Enviar Pedido</button>  
-                            </div>
-                        </div>
-                    </div>
-
-                                    
-                </form>
-            </div>
-        </div>
-    </section>
-   <section class="button">
-    <div></div>
-   </section>
-      <!-- FOOTER -->
-      <footer>
-         <div class="line">
-            <div class="s-12 l-6">
-               <p>Todos os direitos reservados.</p>
-            </div>
-            <div class="s-12 l-6">
-               <a class="right" href="//www.orc-project.com" title="Elaborado por orcseven Soluções IT[2018]. ">Elaborado por orcseven Soluções IT[2018]. </a>
-            </div>
-         </div>
-      </footer>
+      
       <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
       <script src="//unpkg.com/axios/dist/axios.min.js"></script>
       <script type="text/javascript">
+
+        var LIMPDOMESTICA ='LD'; // >Limpeza doméstica
+        var LIMPCONDOMINIOS = 'LC'; // >Limpeza de condomínios</option>
+        var LIMPESCRITORIOS = 'LE'; // >Limpeza Escritórios</option>
+        var LIMPARMAZENS = 'LA'; //Limpeza Armazens</option>
+        var LIMPPOSOBRA = 'LPO'; //>Limpeza pós-obras</option>
+        var LIMPMUDANCAS = 'LPM'; //>Limpeza pré-mudanças</option>
+        var LIMPVIDROS = 'LVF'; //>Limpeza vidros/fachadas</option>
+
+        var INPUT_FIELDS = [
+            'budgetName', //0
+            'budgetEmail', //1 
+            'budgetMobile', //2  
+            'budgetStreet', //3
+            'budgetCity', //4
+            'budgetTipologia', //5 
+            'budgetFloor', //6
+            'budgetBedRooms', //7
+            'budgetRooms', //8
+            'budgetWc', //9
+            'budgetArea', //10
+            'budgetFocos', //11
+            'budgetObserva', //12,
+            'budgetWindows', //13,
+            'budgetPortNumber' //14
+            ];
+
+        function getBudgetServiceTypeSelected() {
+            return $('select[name="budgetSeviceType"]').val();
+        }
+        function getBudgetTipologiaSelected() {
+            return $('select[name="budgetTipologiaSelect"]').val();
+        }
+
+        function formTemplateMode(mode){
+            var hideFieldsGroup = [];
+            var showFieldsGroup = [];
+
+            if (getBudgetTipologiaSelected() !== 'TT') {
+                hideFieldsGroup.push(INPUT_FIELDS[5]);
+            } else {
+                showFieldsGroup.push(INPUT_FIELDS[5]);
+            }
+
+            switch (mode) {
+                case LIMPDOMESTICA:
+                case LIMPMUDANCAS:
+                case LIMPPOSOBRA:
+                default: 
+                    hideFieldsGroup.push(INPUT_FIELDS[11]);
+                    hideFieldsGroup.push(INPUT_FIELDS[13]);
+                    showFieldsGroup.push(INPUT_FIELDS[7]);
+                    showFieldsGroup.push(INPUT_FIELDS[8]);
+                    showFieldsGroup.push(INPUT_FIELDS[9]);
+                    showFieldsGroup.push(INPUT_FIELDS[6]);
+                    showFieldsGroup.push(INPUT_FIELDS[10]);
+                break;
+                case LIMPCONDOMINIOS: 
+                    showFieldsGroup.push(INPUT_FIELDS[6]);
+                    showFieldsGroup.push(INPUT_FIELDS[10]);
+                    showFieldsGroup.push(INPUT_FIELDS[11]);       
+                    hideFieldsGroup.push(INPUT_FIELDS[7]);
+                    hideFieldsGroup.push(INPUT_FIELDS[8]);
+                    hideFieldsGroup.push(INPUT_FIELDS[9]);
+                    hideFieldsGroup.push(INPUT_FIELDS[13]);
+                break;
+                case LIMPESCRITORIOS: 
+                case LIMPARMAZENS:
+                    hideFieldsGroup.push(INPUT_FIELDS[7]);
+                    hideFieldsGroup.push(INPUT_FIELDS[11]);
+                    hideFieldsGroup.push(INPUT_FIELDS[13]);
+                    showFieldsGroup.push(INPUT_FIELDS[6]);
+                    showFieldsGroup.push(INPUT_FIELDS[10]);
+                break;
+                case LIMPVIDROS:
+                    hideFieldsGroup.push(INPUT_FIELDS[6]);
+                    hideFieldsGroup.push(INPUT_FIELDS[7]);
+                    hideFieldsGroup.push(INPUT_FIELDS[8]);
+                    hideFieldsGroup.push(INPUT_FIELDS[9]); 
+                    showFieldsGroup.push(INPUT_FIELDS[10]);                  
+                    hideFieldsGroup.push(INPUT_FIELDS[11]);
+                    showFieldsGroup.push(INPUT_FIELDS[13]);
+                break;
+            }
+            hideFieldsGroup.forEach(function (name, position, allarr) {
+                var jqry = '[name="{{name}}"]'.replace('{{name}}', name);
+                $(jqry).parent().hide();
+                $(jqry).val('');
+            });
+            showFieldsGroup.forEach(function (name, position, allarr) {
+                var jqry = '[name="{{name}}"]'.replace('{{name}}', name);
+                $(jqry).parent().show();
+                $(jqry).val('');
+            })
+        }
+
+
+        function formPredefined () {
+            var serviceType = getBudgetServiceTypeSelected();
+            formTemplateMode(serviceType);
+        }
+
          jQuery(document).ready(function($) {
+            formPredefined();
+
+            $('select[name="budgetSeviceType"]').on('change', function(){
+                formTemplateMode(this.value);
+                return true;
+            });
+
+            $('select[name="budgetTipologiaSelect"]').on('change', function(){
+                formTemplateMode(this.value);
+                return true;
+            });
+
             $("form").submit(function(e){
               e.preventDefault();
+              
               let formData = $('form').serializeArray().map(function(x){this[x.name] = x.value; return this;}.bind({}))[0]
+              formData['budgetSeviceType'] = getBudgetServiceTypeSelected();
+              formData['budgetTipologiaSelect'] = getBudgetTipologiaSelected();
+              formData['budgetDomain'] = window.location.hostname
               let params = {
                     REQ_CONTEX:996699,
                     REQ_ACTION:1000,
@@ -227,10 +439,18 @@
                 }
                 axios({
                     method: 'post',
-                    url: '//orcseven.com/api/orcv2',
+                    url: window.location.hostname === 'localhost' ? 'http://localhost:8081/orcv2' : '//orcseven.com/api/orcv2',
                     data: params
                 }).then(function(res){
                     debugger;
+                    if (res.data.iook) {
+                        $('#budgetForm').hide();
+                        $('#budgetSuccessMsg').text(res.data.success);
+                        $('#budgetSuccess').show();
+                        //alert(res.data.success);
+                    } else {
+                        alert(res.data.error);
+                    }
                 }).catch(function(err){
                     if (err && err.response) {
                         alert(err.response.data.error);

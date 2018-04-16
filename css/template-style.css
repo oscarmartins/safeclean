@@ -306,8 +306,9 @@ h2.section-title:after {
 	width: 100px;
 }
 h2.section-title {
-	color: #dedede;
-	font-size: 2.8em;
+	/** color: #dedede;**/
+	color: #fbe939;
+	font-size: 2em;
 	font-weight: 700;
 	letter-spacing: -1px;
 	margin: 0 0 1.25em;
@@ -607,7 +608,7 @@ h2.exp-title-sm{
 }
 .budgets h4{
 	margin: 0em 1em 1em 0em;
-    color: #7ad574;
+    color: #ffffff;
 }
 
 .budgets p label{
