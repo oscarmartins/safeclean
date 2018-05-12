@@ -7,7 +7,7 @@
       <meta name="keywords" content="orçamento de limpeza">
       <title>Orçamentos de Limpeza safeclean Serviços de Limpeza</title>
       <link rel="canonical" href="//safeclean.pt" />
-      <link rel="alternate" hreflang="x-default" href="//www.safeclean.pt/" />
+      <link rel="alternate" hreflang="x-default" >
       <link rel="shortcut icon" href="/img/favicon.ico">
       <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
@@ -370,7 +370,7 @@
             } else {
                 showFieldsGroup.push(INPUT_FIELDS[5]);
             }
-
+            
             switch (mode) {
                 case LIMPDOMESTICA:
                 case LIMPMUDANCAS:
@@ -438,7 +438,7 @@
             });
 
             $('select[name="budgetTipologiaSelect"]').on('change', function(){
-                formTemplateMode(this.value);
+                formTemplateMode(getBudgetServiceTypeSelected());
                 return true;
             });
 
