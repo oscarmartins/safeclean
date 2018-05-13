@@ -48,7 +48,6 @@ jQuery(document).ready(function($) {
       if (imglogo >= 61) {
         $('img.logo').css('height', imglogo - 6);
       } else {
-        console.log($(this).scrollTop());
           if($(this).scrollTop() <= 30) {
             $('img.logo').css('height', '117px');
           }
