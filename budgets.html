@@ -325,7 +325,8 @@
 
       
       <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
-      <script src="//unpkg.com/axios/dist/axios.min.js"></script>
+      <script src="js/axios.min.js"></script>
+      <script src="js/orcservices.js"></script>
       <script type="text/javascript">
 
         var LIMPDOMESTICA ='LD'; // >Limpeza doméstica
@@ -443,28 +444,24 @@
             });
 
             $("form").submit(function(e){
-              e.preventDefault();
+                e.preventDefault();
               
-              let formData = $('form').serializeArray().map(function(x){this[x.name] = x.value; return this;}.bind({}))[0]
-              formData['budgetSeviceType'] = getBudgetServiceTypeSelected();
-              formData['budgetTipologiaSelect'] = getBudgetTipologiaSelected();
-              formData['budgetDomain'] = window.location.hostname
-              let params = {
+                let formData = $('form').serializeArray().map(function(x){this[x.name] = x.value; return this;}.bind({}))[0]
+                formData['budgetSeviceType'] = getBudgetServiceTypeSelected();
+                formData['budgetTipologiaSelect'] = getBudgetTipologiaSelected();
+                formData['budgetDomain'] = window.location.hostname
+
+                let params = {
                     REQ_CONTEX:996699,
                     REQ_ACTION:1000,
                     REQ_INPUTS: formData
                 }
-                axios({
-                    method: 'post',
-                    url: window.location.hostname === 'localhost' ? 'http://localhost:8081/orcv2' : 'https://orcseven.com/api/orcv2',
-                    data: params
-                }).then(function(res){
-                    debugger;
+
+                httpRequestApi('post', params).then(function(res){
                     if (res.data.iook) {
                         $('#budgetForm').hide();
                         $('#budgetSuccessMsg').text(res.data.success);
                         $('#budgetSuccess').show();
-                        //alert(res.data.success);
                     } else {
                         alert(res.data.error);
                     }
@@ -475,7 +472,8 @@
                         alert('Ocorreu um erro desconhecido. Tente mais tarde.');
                     }
                 });
-              return false;
+
+                return false;
             });
 
             var theme_slider = $("#owl-demo");

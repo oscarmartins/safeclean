@@ -25,6 +25,10 @@ jQuery(document).ready(function($) {
       e.preventDefault();
   });
   $(window).scroll(function() {
+      
+      $('.form_message_callback').hide()
+      $('.form_message_support').hide()
+
       var fromTop = $(this).scrollTop() + topMenuHeight;
       var cur = scrollItems.map(function() {
           if ($(this).offset().top < fromTop)

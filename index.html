@@ -284,18 +284,27 @@
          </div>
          
          <div id="callback" class="first-block">
-            <form class="customform" action="">
+            <form class="customform" action="post" id="formCallBack">
                 <div class="s-12 m-6 l-6 center">
                   <h2 class="exp-title-green">Nós ligamos de volta!</h2>
                 </div>
-                <div class="s-12 m-3 l-3 center">
-                  <input name="name" placeholder="Nome" title="Nome" type="text" />
-                  <input name="phone" placeholder="Contato" title="Contato" type="tel"  pattern="\d{3}\d{3}\d{3}"/>
+
+                <div class="s-12 m-3 l-3 center padding margin-bottom  form_message_callback" style="display:none;">
+                  <div class="box margin-bottom2x ">
+                    
+                  </div>
+                </div>                
+
+                <div class="s-12 m-3 l-3 center ">
+                  <input name="budgetName" placeholder="Nome" title="Nome" type="text" />
+                  <input name="budgetMobile" placeholder="Contato" title="Contato" type="tel"  pattern="\d{3}\d{3}\d{3}"/>
                 </div>
                
                 <div class="s-12 m-3 l-3 center">
                   <button type="submit">Enviar</button>
                 </div>
+                <input name="budgetType" value="10" type="hidden" />          
+                <input name="budgetDomain" value="" type="hidden" />     
               </form>
          </div>
          
@@ -340,11 +349,18 @@
 
                   <div class="s-12 m-12 l-4 margin-bottom">
                     <h3>Envie-nos uma mensagem</h3>
-                    <form class="customform" action="">                      
-                      <div class="s-12"><input name="" placeholder="Nome e Apelido" title="Nome e Apelido" type="text" /></div>
-                      <div class="s-12"><input name="" placeholder="E-mail" title="e-mail" type="text" /></div>
-                      <div class="s-12"><textarea placeholder="Mensagem" name="" rows="5"></textarea></div>
+                    <form class="customform" action="" id="formSupport">     
+                        <div class="s-12 padding margin-bottom  form_message_support" style="display:none;">
+                            <div class="box margin-bottom2x ">
+                              
+                            </div>
+                          </div>                        
+                      <div class="s-12"><input name="budgetName" placeholder="Nome e Apelido" title="Nome e Apelido" type="text" /></div>
+                      <div class="s-12"><input name="budgetEmail" placeholder="E-mail" title="e-mail" type="text" /></div>
+                      <div class="s-12"><textarea placeholder="Mensagem" name="budgetObserva" rows="5"></textarea></div>
                       <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">ENVIAR</button></div>
+                      <input name="budgetType" value="30" type="hidden" />          
+                      <input name="budgetDomain" value="" type="hidden" />    
                     </form>
                   </div>     
                   
@@ -368,6 +384,8 @@
          </div>
       </footer>
       <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+      <script src="js/axios.min.js"></script>
+      <script src="js/orcservices.js"></script>
       <script type="text/javascript">
          jQuery(document).ready(function($) {
             var theme_slider = $("#owl-demo");
@@ -396,6 +414,58 @@
             $(".prev-arrow").click(function() {
                 theme_slider.trigger('owl.prev');
             })     
+
+            let currentForm = null;
+
+            $("form").submit(function(e){
+                e.preventDefault();
+                $('.form_message_callback').hide()
+                $('.form_message_support').hide()
+                
+                if (e.currentTarget.hasAttribute('id')) {
+                  currentForm = e.currentTarget
+
+                  let formData = $(currentForm).serializeArray().map(function(x){this[x.name] = x.value; return this;}.bind({}))[0]
+                    formData['budgetDomain'] = window.location.hostname
+
+                    let params = {
+                        REQ_CONTEX:996699,
+                        REQ_ACTION:1000,
+                        REQ_INPUTS: formData
+                    }
+
+                    httpRequestApi('post', params).then(function(res){
+                      
+                      if (res.data.iook){
+                        let boxTarget = null
+                        if (e.currentTarget.id === 'formCallBack') {
+                          boxTarget = '.form_message_callback'
+                        } else if (e.currentTarget.id === 'formSupport') {
+                          boxTarget = '.form_message_support'
+                        } else {
+                          //default
+                        }
+                        if (boxTarget) {
+                          $(boxTarget).find('div.box').empty()
+                          $(boxTarget).find('div.box').text(res.data.success)
+                          $(boxTarget).show()
+                          currentForm.reset()
+                        }
+                      } else {
+                        alert(res.data.error)
+                      }
+                    }).catch(function(err){
+                        if (err && err.response) {
+                            alert(err.response.data.error);
+                        } else {
+                            alert('Ocorreu um erro desconhecido. Tente mais tarde.');
+                        }
+                    });
+
+                  
+                }
+                return false
+            });
         }); 
       </script>
       </div>
