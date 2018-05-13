@@ -39,5 +39,21 @@ jQuery(document).ready(function($) {
               .parent().removeClass("active-item")
               .end().filter("[href=#" + id + "]").parent().addClass("active-item");
       }
+
+      
+
+
+      var imglogo = $('img.logo').height();
+
+      if (imglogo >= 61) {
+        $('img.logo').css('height', imglogo - 6);
+      } else {
+        console.log($(this).scrollTop());
+          if($(this).scrollTop() <= 30) {
+            $('img.logo').css('height', '117px');
+          }
+      }
+
+
   });
 });  

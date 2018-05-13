@@ -123,17 +123,17 @@
                          </div>
                     <div class="s-12 l-8">
                      <p class="callcenter right">
-                          <a href="tel:916665011" class="text-white">
+                          <a href="tel:916665011" class="text-white" target="_blank"> 
                            <i class="icon-sli-phone"></i>
                            916665011
                          </a>
                          <span class="hide-s hide-m"> &nbsp;&nbsp; </span>
-                         <a href="tel:212415077" class="text-white ">
+                         <a href="tel:215860560" class="text-white " target="_blank">
                              <i class="icon-sli-phone"></i>
-                             212415077
+                             215860560
                            </a>
                          <span class="hide-s hide-m"> &nbsp;&nbsp; </span>
-                         <a href="mailto:geral@safeclean.pt?subject=[contato geral website]&body=[safeclean.pt]&nbsp;">
+                         <a href="mailto:geral@safeclean.pt?subject=[contato geral website]&body=[safeclean.pt]&nbsp;" target="_blank">
                            <i class="icon-mail "></i>
                            geral@safeclean.pt
                          </a>
@@ -511,6 +511,20 @@
             if (footerTop < docHeight) {
                 $('footer').css('margin-top', 10 + (docHeight - footerTop) + 'px');
             }
+            $('body').scroll(function () {
+                
+                 var imglogo = $('img.logo').height();
+
+                 if (imglogo >= 61) {
+                     $('img.logo').css('height', imglogo - 6);
+                 } else {
+                     console.log($(this).scrollTop());
+                     if ($(this).scrollTop() <= 30) {
+                         $('img.logo').css('height', '117px');
+                     }
+                 }
+             });
+
         }); 
       </script>
    </body>
