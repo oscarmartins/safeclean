@@ -1,3 +1,27 @@
+function updTopbar () {
+    var imglogo = $('img.logo').height();
+    $('img.logo').css('min-height','56px');
+    $('img.logo').css('max-height','128px');
+   /**
+    if (imglogo >= 61) {
+      $('img.logo').css('height', imglogo - 4);
+    } else {
+        if ($(window).scrollTop() <= 30) {
+          $('img.logo').css('height', '117px');
+        }
+    }
+**/
+    var st = $(window).scrollTop()
+    if (st >= 160) {
+        $('img.logo').css('height', '56px');
+    } else {
+        $('img.logo').css('height', '128px');
+    }
+        
+
+
+}
+
 jQuery(document).ready(function($) {
   // One page navigation
   var lastId,
@@ -25,7 +49,7 @@ jQuery(document).ready(function($) {
       e.preventDefault();
   });
   $(window).scroll(function() {
-      
+      console.log($(window).scrollTop())
       $('.form_message_callback').hide()
       $('.form_message_support').hide()
 
@@ -44,19 +68,14 @@ jQuery(document).ready(function($) {
               .end().filter("[href=#" + id + "]").parent().addClass("active-item");
       }
 
-      
-
-
-      var imglogo = $('img.logo').height();
-
-      if (imglogo >= 61) {
-        $('img.logo').css('height', imglogo - 6);
-      } else {
-          if($(this).scrollTop() <= 30) {
-            $('img.logo').css('height', '117px');
-          }
-      }
-
+      setTimeout(updTopbar,1, this);
 
   });
+
+  $(window).load(function() {
+    // executes when complete page is fully loaded, including all frames, objects and images
+    //setTimeout(updTopbar,1, this);
+   });
+   
+
 });  

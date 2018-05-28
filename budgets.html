@@ -40,6 +40,7 @@
       <link rel="stylesheet" href="css/icons.css">
       <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
       <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
       <!-- CUSTOM STYLE -->
       <link rel="stylesheet" href="css/template-style.css">
       <link href='//fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900|Ubuntu' rel='stylesheet' type='text/css'>
@@ -64,6 +65,27 @@
         gtag('config', 'AW-807428079/xf07CNe294ABEO-_gYED', {
              'phone_conversion_number': '916665011'
              });
+</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#07281d",
+      "text": "#b2d192"
+    },
+    "button": {
+      "background": "#afed71"
+    }
+  },
+  "content": {
+    "message": "Este site usa cookies para garantir que o utilizador tenha a melhor experiência no nosso site.",
+    "dismiss": "Entendi!",
+    "link": "Ler mais",
+    "href": "/cookiepolicy.html"
+  }
+})});
 </script>
 <style>
     html {
@@ -123,17 +145,17 @@
                          </div>
                     <div class="s-12 l-8">
                      <p class="callcenter right">
-                          <a href="tel:916665011" class="text-white" target="_blank"> 
+                          <a href="tel:916665011" class="text-white" > 
                            <i class="icon-sli-phone"></i>
                            916665011
                          </a>
                          <span class="hide-s hide-m"> &nbsp;&nbsp; </span>
-                         <a href="tel:215860560" class="text-white " target="_blank">
+                         <a href="tel:215860560" class="text-white " >
                              <i class="icon-sli-phone"></i>
                              215860560
                            </a>
                          <span class="hide-s hide-m"> &nbsp;&nbsp; </span>
-                         <a href="mailto:geral@safeclean.pt?subject=[contato geral website]&body=[safeclean.pt]&nbsp;" target="_blank">
+                         <a href="mailto:geral@safeclean.pt?subject=[contato geral website]&body=[safeclean.pt]&nbsp;" class="hide-s hide-m">
                            <i class="icon-mail "></i>
                            geral@safeclean.pt
                          </a>
@@ -242,7 +264,7 @@
                                    <select form="select" name="budgetTipologiaSelect" >
                                        <option value="T1">T1</option>
                                        <option value="T2">T2</option>
-                                       <option value="T3L">T3</option>
+                                       <option value="T3">T3</option>
                                        <option value="T4">T4</option>
                                        <option value="T5">T5</option>
                                        <option value="T6">T6</option>
@@ -295,7 +317,17 @@
                        </div>
                        <div class="line">
                            <div class="margin">
-                               <div class="s-12 l-3 right">
+                                <div class="s-12 l-12">
+                                        <p class="rgpd-label margin-bottom box dark">
+                                            Os dados pessoais recolhidos neste formulário destinam-se exclusivamente ao contacto com o cliente para lhe prestar os esclarecimentos por ele solicitados.
+                                            Para mais informações referentes à <mark>Política de Privacidade</mark> e <mark>Tratamento de Dados Pessoais</mark> SAFECLEAN, 
+                                            por favor consulte a <a href="/rgpd.html" target="_blank" class="policy">Declaração de proteção de dados</a>.
+                                        </p>
+                                    </div>
+                                    <div class="s-12">
+                                            <input name="budgetRgpd" value="20" type="checkbox" class="left"/><label class="budgetRgpd left">Estou de acordo com os termos e condições.</label>
+                                        </div>
+                               <div class="s-12 m-8 l-3">
                                        <button type="submit">Enviar Pedido</button>  
                                </div>
                            </div>
@@ -311,14 +343,30 @@
    
        <div id="footer-content" class="sticky-footer">
                <footer>
-                       <div class="line">
-                          <div class="s-12 l-6">
-                             <p>Todos os direitos reservados.</p>
+                    <div class="size-960">
+                            <div class="line">
+                              <div class="s-12 l-4">
+                                <p>Todos os direitos reservados®.</p>
+                              </div>
+                              <div class="s-12 l-4">
+                                <div class="margin box" style="background-color: transparent;">
+                                  <div class="s-12">
+                                    <a href="/terms.html" target="_blank">Termos e Condições</a>
+                                  </div>
+                                  <div class="s-12">
+                                    <a href="/rgpd.html" target="_blank">Declaração de proteção de dados</a>
+                                  </div>
+                                  <div class="s-12">
+                                    <a href="/cookiepolicy.html" target="_blank">Política de Cookies</a>
+                                  </div>
+                                </div>
+                              </div>
+                          
+                              <div class="s-12 l-4">
+                                <a class="right" href="//www.orcseven.com" title="Elaborado por orcseven Soluções IT [2018]. ">Elaborado por orcseven Soluções IT [2018]. </a>
+                              </div>
+                            </div>
                           </div>
-                          <div class="s-12 l-6">
-                              <a class="right" href="//www.orcseven.com" title="Elaborado por orcseven Soluções IT [2018]. ">Elaborado por orcseven Soluções IT [2018]. </a>
-                          </div>
-                       </div>
                     </footer>
             </div>
      </div>  
