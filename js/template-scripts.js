@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
       e.preventDefault();
   });
   $(window).scroll(function() {
-      console.log($(window).scrollTop())
+      
       $('.form_message_callback').hide()
       $('.form_message_support').hide()
 
@@ -71,11 +71,4 @@ jQuery(document).ready(function($) {
       setTimeout(updTopbar,1, this);
 
   });
-
-  $(window).load(function() {
-    // executes when complete page is fully loaded, including all frames, objects and images
-    //setTimeout(updTopbar,1, this);
-   });
-   
-
 });  
