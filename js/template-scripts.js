@@ -1,3 +1,27 @@
+function updTopbar () {
+    var imglogo = $('img.logo').height();
+    $('img.logo').css('min-height','56px');
+    $('img.logo').css('max-height','128px');
+   /**
+    if (imglogo >= 61) {
+      $('img.logo').css('height', imglogo - 4);
+    } else {
+        if ($(window).scrollTop() <= 30) {
+          $('img.logo').css('height', '117px');
+        }
+    }
+**/
+    var st = $(window).scrollTop()
+    if (st >= 160) {
+        $('img.logo').css('height', '56px');
+    } else {
+        $('img.logo').css('height', '128px');
+    }
+        
+
+
+}
+
 jQuery(document).ready(function($) {
   // One page navigation
   var lastId,
@@ -25,6 +49,10 @@ jQuery(document).ready(function($) {
       e.preventDefault();
   });
   $(window).scroll(function() {
+      
+      $('.form_message_callback').hide()
+      $('.form_message_support').hide()
+
       var fromTop = $(this).scrollTop() + topMenuHeight;
       var cur = scrollItems.map(function() {
           if ($(this).offset().top < fromTop)
@@ -39,5 +67,8 @@ jQuery(document).ready(function($) {
               .parent().removeClass("active-item")
               .end().filter("[href=#" + id + "]").parent().addClass("active-item");
       }
+
+      setTimeout(updTopbar,1, this);
+
   });
 });  

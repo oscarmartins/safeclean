@@ -152,7 +152,7 @@ p.logo strong {
 	padding: 10px 20px;
 	width: 100%;
 }
-#carousel .owl-theme .owl-controls {
+#carousel .owl-dots {
 	background: none repeat scroll 0 0 rgba(0, 40, 58, 0.53);
 	bottom: 0;
 	margin: 0;
@@ -160,7 +160,7 @@ p.logo strong {
 	position: absolute;
 	width: 100%;
 }
-.owl-theme .owl-controls .owl-page span {
+.owl-carousel.owl-theme .owl-dot span {
 	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 	border: 3px solid rgba(0, 40, 58, 0.57);
 	height: 18px;
@@ -168,7 +168,7 @@ p.logo strong {
 	opacity: 1;
 	width: 18px;
 }
-.owl-theme .owl-controls .owl-page.active span, .owl-theme .owl-controls.clickable .owl-page:hover span {
+.owl-carousel.owl-theme .owl-dot.active span, .owl-carousel.owl-theme .owl-dot:hover span {
 	background: none repeat scroll 0 0 #92c500;
 }
 .first-block {
@@ -636,4 +636,25 @@ h2.section-title{
 	h2.section-title{
 		font-size: 1.8em;
 	}
+}
+p.rgpd-label {
+	font-size: 12px!important;
+	color: white;
+	text-align: left!important;
+}
+p.rgpd-label a{
+	color: yellowgreen;
+	text-align: left!important;
+}
+label.budgetRgpd{
+	color: #FFFFFF;
+	font-size: 12px!important;
+}
+p.rgpd-label.dark, label.budgetRgpd.dark {
+	color: darkslategrey;
+}
+
+a.policy{
+	color: green!important;
+    font-weight: bold;
 }

@@ -31,13 +31,13 @@
       <link rel="stylesheet" href="css/icons.css">
       <link rel="stylesheet" href="owl-carousel/owl.carousel.css">
       <link rel="stylesheet" href="owl-carousel/owl.theme.css">
+      <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css" />
       <!-- CUSTOM STYLE -->
       <link rel="stylesheet" href="css/template-style.css">
       <link href='//fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900|Ubuntu' rel='stylesheet' type='text/css'>
       <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
       <script type="text/javascript" src="js/jquery-ui.min.js"></script>    
       <script type="text/javascript" src="js/modernizr.js"></script>
-      <script type="text/javascript" src="js/responsee.js"></script>
       <script type="text/javascript" src="js/template-scripts.js"></script> 
                  
       <!--[if lt IE 9]>
@@ -56,7 +56,27 @@
              'phone_conversion_number': '916665011'
              });
 </script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+window.addEventListener("load", function(){
+window.cookieconsent.initialise({
+  "palette": {
+    "popup": {
+      "background": "#07281d",
+      "text": "#b2d192"
+    },
+    "button": {
+      "background": "#afed71"
+    }
+  },
+  "content": {
+    "message": "Este site usa cookies para garantir que o utilizador tenha a melhor experiência no nosso site.",
+    "dismiss": "Entendi!",
+    "link": "Ler mais",
+    "href": "/cookiepolicy.html"
+  }
+})});
+</script>
    </head>
    <body class="size-1140">
       <div class="with-sticky-footer">
@@ -79,17 +99,17 @@
                     </div>
                <div class="s-12 l-8">
                   <p class="callcenter right">
-                      <a href="tel:916665011" class="text-white" target="_blank">
+                      <a href="tel:916665011" class="text-white">
                         <i class="icon-sli-phone"></i>
                         916665011
                       </a>
                       <span class="hide-s hide-m"> &nbsp;&nbsp; </span>
-                      <a href="tel:215860560" class="text-white " target="_blank">
+                      <a href="tel:215860560" class="text-white " >
                           <i class="icon-sli-phone"></i>
                           215860560
                         </a>
                       <span class="hide-s hide-m"> &nbsp;&nbsp; </span>
-                      <a href="mailto:geral@safeclean.pt?subject=[contato geral website]&body=[safeclean.pt]&nbsp;" target="_blank">
+                      <a href="mailto:geral@safeclean.pt?subject=[contato geral website]&body=[safeclean.pt]&nbsp;" class="hide-s hide-m">
                         <i class="icon-mail "></i>
                         geral@safeclean.pt
                       </a>
@@ -122,10 +142,11 @@
       </header>  
       <section>
          <!-- CAROUSEL --> 
+         
          <div id="carousel">
-            <div id="owl-demo" class="owl-carousel owl-theme"> 
+              <div id="owl-demo" class="owl-carousel owl-theme"> 
                <div class="item">
-                  <img src="img/sliders/posobraoutro.jpg" alt="">
+                  <img src="img/sliders/modern_minimalist_dining_room_ld.jpg" alt="">
                   <div class="line"> 
                      <div class="text hide-s">
                         <div class="line"> 
@@ -162,7 +183,7 @@
                   </div>
                </div>
                <div class="item">
-                <img src="img/sliders/condominios.jpg" alt="">
+                <img src="img/sliders/condominios-scala-cascais.webp" alt="">
                 <div class="line"> 
                    <div class="text hide-s">
                       <div class="line"> 
@@ -179,7 +200,7 @@
                    </div>
                 </div>
              </div>
-             <!--div class="item">
+             <div class="item">
                 <img src="img/sliders/cleaning-dwell-time.jpg" alt="">
                 <div class="line"> 
                    <div class="text hide-s">
@@ -196,7 +217,7 @@
                       <div class="s-12 m-4 l6"><a class="white-btn success-btn align-center" href="/budgets.html">Solicite um orçamento GRÁTIS e SEM COMPROMISSO</a></div>
                    </div>
                 </div>
-             </div-->
+             </div>
             </div>
          </div>
          <!-- FIRST BLOCK -->
@@ -210,13 +231,13 @@
         
                   <!-- ABOUT US -->
                   <div id="about-us">
-                    <div class="s-12 m-12 l-6 media-container hide-s hode-m">
+                    <div class="s-12 m-12 l-6 media-container hide-s hide-m">
                        <img src="img/sliders/professional-cleaning-tips.jpg" alt="" class="full-img">
                     </div>
                     <article class="s-12 m-12 l-6">
-                       <h2 class="hide-s hode-m">Nós Somos<br> Especialistas em<br> Serviços de Limpeza</h2>
-                       <h2 class="exp-title-sm hide-l">Especialistas em<br> Serviços de Limpeza</h2>
-                       <p>
+                       <h2 class="hide-s hide-l">Nós Somos<br> Especialistas em<br> Serviços de Limpeza</h2>
+                       <h2 class="exp-title-sm hide-m hide-l hide-xl hide-xxl">Especialistas em<br> Serviços de Limpeza</h2>
+                       <p class="padding">
                           A safeclean é uma empresa especialista em serviços de limpeza profissional. 
                           Contamos com alguns anos de experiência, 
                           estamos equipados com serviços de qualidade para atender as necessidades de limpeza profissional de todos os clientes.
@@ -231,21 +252,21 @@
                      <h2 class="section-title">METODOLOGIA DE TRABALHO</h2>
                      <div class="margin">
                         <div class="s-12 m-6 l-4 margin-bottom">
-                           <i class="icon-sli-call-in"></i>
+                           <i class="icon-sli-call-in hide-s"></i>
                            <div class="service-text">
                               <h3>CONTATO</h3>
-                              <p>Após o contato do cliente iremos proceder com a visita ao local.</p>
+                              <p >Após o contato do cliente iremos proceder com a visita ao local.</p>
                            </div>
                         </div>
                         <div class="s-12 m-6 l-4 margin-bottom">
-                           <i class="icon-sli-note"></i>
+                           <i class="icon-sli-note hide-s"></i>
                            <div class="service-text">
                               <h3>ORÇAMENTO</h3>
                               <p>Após a visita é elaborado um orçamento conforme as necessidade do cliente.</p>
                            </div>
                         </div>
                         <div class="s-12 m-12 l-4 margin-bottom">
-                           <i class="icon-sli-wrench"></i>
+                           <i class="icon-sli-wrench hide-s"></i>
                            <div class="service-text">
                               <h3>MÃOS A OBRA</h3>
                               <p>E por fim, depois de o orçamento abjudicado, é hora de por mãos a obra.</p>
@@ -259,61 +280,81 @@
             <div class="line">
                 <h2 class="section-title exp-title">OS NOSSOS SERVIÇOS</h2>
                <div class="margin">
-                  <div class="s-12 l-4 margin-bottom">
+                  <div class="s-12 m-6 l-3 margin-bottom">
                      <img class="img-circle center" src="img/banners/limpeza_domestica.jpg" >
                      <h2>Limpeza Doméstica</h2>
-                     <p>Como profissionais no setor de limpeza doméstica ou residencial sabemos o quanto é importante manter uma casa limpa. Sabemos que depois de um dia de trabalho e importante que ao chagar a casa esta esteja sempre limpa e cheirosa. O serviço de limpeza doméstica é mais do que remover o pó e a sujidade, é a garantia de bem-estar em um ambiente agradável.</p>
+                     <p class="hide-s">Como profissionais no setor de limpeza doméstica ou residencial sabemos o quanto é importante manter uma casa limpa. Sabemos que depois de um dia de trabalho e importante que ao chagar a casa esta esteja sempre limpa e cheirosa. O serviço de limpeza doméstica é mais do que remover o pó e a sujidade, é a garantia de bem-estar em um ambiente agradável.</p>
                   </div>
-                  <div class="s-12 l-4 margin-bottom">
+                  <div class="s-12 m-6 l-3 margin-bottom">
+                    <img class="img-circle center" src="img/banners/pos-obra.jpg">
+                    <h2>LIMPEZA PÓS-OBRAS</h2>
+                    <p class="hide-s">A limpeza pós obra é essencial depois das obras me casa. As obras em casa, ou em qualquer outro lugar, deixa sempre resíduos de sujeira e pó, e até manchas de tintas e massa. A limpeza depois da obra é igualmente importante para concluir o trabalho e dar um acabamento perfeito e limpo. A impressão final de uma obra ou reforma é visto nos detalhes e é importante que estes detalhes estejam limpos.</p>
+                  </div>
+                  <div class="s-12 m-6 l-3 margin-bottom">
                      <img class="img-circle center" src="img/banners/limpeza-de-condominios.jpg">
                      <h2>Limpeza de Condomínios</h2>
-                     <p>Os espaços comuns de um condomínio são as primeiras impressões para as habitações e por isso são merecedoras de atenção e uma limpeza de qualidade. A limpeza nestes espaços promove a boa aparência do condomínio e um bem-estar a todos os condóminos, por isso é importante que estejam limpos e cheiroso.</p>
+                     <p class="hide-s">Os espaços comuns de um condomínio são as primeiras impressões para as habitações e por isso são merecedoras de atenção e uma limpeza de qualidade. A limpeza nestes espaços promove a boa aparência do condomínio e um bem-estar a todos os condóminos, por isso é importante que estejam limpos e cheiroso.</p>
                   </div>
-                  <!--div class="s-12 m-6 l-3 margin-bottom">
+                  <div class="s-12 m-6 l-3 margin-bottom">
                      <img class="img-circle center" src="img/banners/vidros.jpg">
                      <h2>LIMPEZA DE VIDROS/FACHADAS</h2>
-                     <p>Como profissionais no setor de limpeza, mais precisamente fachadas e vidros, entendemos que a uma estrutura limpa é das primeira das impressões que tiramos de onde que que vamos. A limpeza também é importante para preservar a boa imagem e integridade da empresa junto aos cliente e visitantes.</p>
-                  </div-->
-                  <div class="s-12 l-4 margin-bottom">
-                      <img class="img-circle center" src="img/banners/pos-obra.jpg">
-                     <h2>LIMPEZA PÓS-OBRAS</h2>
-                     <p>A limpeza pós obra é essencial depois das obras me casa. As obras em casa, ou em qualquer outro lugar, deixa sempre resíduos de sujeira e pó, e até manchas de tintas e massa. A limpeza depois da obra é igualmente importante para concluir o trabalho e dar um acabamento perfeito e limpo. A impressão final de uma obra ou reforma é visto nos detalhes e é importante que estes detalhes estejam limpos.</p>
+                     <p class="hide-s">Como profissionais no setor de limpeza, mais precisamente fachadas e vidros, entendemos que a uma estrutura limpa é das primeira das impressões que tiramos de onde que que vamos. A limpeza também é importante para preservar a boa imagem e integridade da empresa junto aos cliente e visitantes.</p>
                   </div>
                </div>
             </div>
          </div>
          
          <div id="callback" class="first-block">
-            <form class="customform" action="">
-                <div class="s-12 m-6 l-6 center">
+            <form class="customform" action="post" id="formCallBack">
+                <div class="s-12 m-12 l-6 center">
                   <h2 class="exp-title-green">Nós ligamos de volta!</h2>
                 </div>
-                <div class="s-12 m-3 l-3 center">
-                  <input name="name" placeholder="Nome" title="Nome" type="text" />
-                  <input name="phone" placeholder="Contato" title="Contato" type="tel"  pattern="\d{3}\d{3}\d{3}"/>
+
+                <div class="s-12 m-3 l-3 center padding margin-bottom  form_message_callback" style="display:none;">
+                  <div class="box margin-bottom2x ">
+                    
+                  </div>
+                </div>                
+
+                <div class="s-12 m-8 l-3 center ">
+                  <input name="budgetName" placeholder="Nome" title="Nome" type="text" />
                 </div>
-               
-                <div class="s-12 m-3 l-3 center">
+                <div class="s-12 m-8 l-3 center ">
+                    <input name="budgetMobile" placeholder="Contato" title="Contato" type="tel"  pattern="\d{3}\d{3}\d{3}"/>
+                  </div>
+                <div class="s-12 m-8 l-3 center ">
+                    <p class="rgpd-label margin-bottom box dark">
+                        Os dados pessoais recolhidos neste formulário destinam-se exclusivamente ao contacto com o cliente para lhe prestar os esclarecimentos por ele solicitados.
+                        Para mais informações referentes à <mark>Política de Privacidade</mark> e <mark>Tratamento de Dados Pessoais</mark> SAFECLEAN, 
+                        por favor consulte a <a href="/rgpd.html" target="_blank" class="policy">Declaração de proteção de dados</a>.
+                    </p>
+                </div>
+                <div class="s-12 m-8 l-3 center padding">
+                    <input name="budgetRgpd" value="10" type="checkbox" class="left"/><label class="budgetRgpd left">Estou de acordo com os termos e condições</label>
+                </div>
+                <div class="s-12 m-8 l-3 center">
                   <button type="submit">Enviar</button>
                 </div>
+                <input name="budgetType" value="10" type="hidden" />          
+                <input name="budgetDomain" value="" type="hidden" /> 
               </form>
          </div>
          
          <!-- CONTACT -->
-         <div id="contact">
+         <div id="contact" >
             <div class="line">
                <h2 class="section-title exp-title">Contactos</h2>
                <div class="margin">
-                  
-                  <div class="s-12 m-12 l-6 margin-bottom l-offset-1">
+                  <div class="s-12 m-12 l-1 margin-bottom"></div>
+                  <div class="s-12 m-12 l-5 margin-bottom">
                      <h3>ONDE ESTAMOS</h3>
                      <address>
                        <p><strong>Sede </strong> </p>
-                        <p><strong>Morada:</strong> Largo da Lagoa, 15 J sala A
+                        <p>Largo da Lagoa, 15 J sala A
                           &nbsp; <br> 
                           2795-116 
                         </p>
-                        <p><strong>Cidade:</strong> Linda-a-Velha</p>                       
+                        <p>Linda-a-Velha</p>                       
                      </address>
                     <p>&nbsp;</p>
                     <address>
@@ -321,33 +362,61 @@
                         <strong>Filial - </strong>Centro de Escritórios Jomavipe Business Center
                       </p>
                       <p>
-                        <strong>Morada:</strong> Rua Cesaltina Fialho Gouveia, 703
+                        Rua Cesaltina Fialho Gouveia, 703
                         <br> 2645-038
                       </p>
                       <p>
-                        <strong>Cidade:</strong> Cascais</p>
+                        Cascais</p>
                       <br>
-                      <p><strong>E-mail Geral:</strong> <a href="mailto:geral@safeclean.pt?subject=[contato geral website]&body=[safeclean.pt]&nbsp;" target="_blank">geral@safeclean.pt</a></p>
-                      <p><strong>E-mail Dep. Comercial:</strong> <a href="mailto:comercial@safeclean.pt?subject=[contato comercial website]&body=[safeclean.pt]&nbsp;" target="_blank">comercial@safeclean.pt</a></p>
+
+                      <dl>
+                          <dt>EMAIL</dt>
+                          <dd>
+                              <p><strong>Geral:</strong> <a href="mailto:geral@safeclean.pt?subject=[contato geral website]&body=[safeclean.pt]&nbsp;" target="_blank" class="policy">geral@safeclean.pt</a></p>
+                              <p><strong>Dep. Comercial:</strong> <a href="mailto:comercial@safeclean.pt?subject=[contato comercial website]&body=[safeclean.pt]&nbsp;" target="_blank" class="policy">comercial@safeclean.pt</a></p>
+                          </dd>
+                      </dl>
+
+                      
                     </address>
                      <br>
                      <h3>Social</h3>
-                     <p><i class="icon-facebook icon"></i> <a href="https://www.facebook.com/safeclean.pt/" target="_blank">Safeclean no facebook</a></p>
+                     <p><i class="icon-facebook icon"></i> <a href="https://www.facebook.com/safeclean.pt/" target="_blank" class="policy">Safeclean no facebook</a></p>
                      <!--p><i class="icon-facebook icon"></i> <a href="https://www.facebook.com/myresponsee">Responsee</a></p-->
                      <!--p class="margin-bottom"><i class="icon-twitter icon"></i> <a href="https://twitter.com/MyResponsee">Responsee</a></p-->
                      
                   </div>
 
-                  <div class="s-12 m-12 l-4 margin-bottom">
+                  <div class="s-12 m-12 l-5 margin-bottom">
                     <h3>Envie-nos uma mensagem</h3>
-                    <form class="customform" action="">                      
-                      <div class="s-12"><input name="" placeholder="Nome e Apelido" title="Nome e Apelido" type="text" /></div>
-                      <div class="s-12"><input name="" placeholder="E-mail" title="e-mail" type="text" /></div>
-                      <div class="s-12"><textarea placeholder="Mensagem" name="" rows="5"></textarea></div>
+                    <form class="customform" action="" id="formSupport">     
+                        <div class="s-12 padding margin-bottom  form_message_support" style="display:none;">
+                            <div class="box margin-bottom2x ">
+                              
+                            </div>
+                          </div>                        
+                      <div class="s-12"><input name="budgetName" placeholder="Nome e Apelido" title="Nome e Apelido" type="text" /></div>
+                      <div class="s-12"><input name="budgetEmail" placeholder="E-mail" title="e-mail" type="text" /></div>
+                      <div class="s-12"><textarea placeholder="Mensagem" name="budgetObserva" rows="5"></textarea></div>
+
+                      <div class="s-12">
+                          <p class="rgpd-label margin-bottom dark">
+                            Os dados pessoais recolhidos neste formulário destinam-se exclusivamente ao contacto com o cliente para lhe prestar os esclarecimentos por ele solicitados.
+                            Para mais informações referentes à <mark>Política de Privacidade</mark> e <mark>Tratamento de Dados Pessoais</mark> SAFECLEAN, 
+                            por favor consulte a <a href="/rgpd.html" target="_blank" class="policy">Declaração de proteção de dados</a>.
+                          </p>
+                      </div>
+                      <div class="s-12">
+                          <input name="budgetRgpd" value="30" type="checkbox" class="left"/><label class="budgetRgpd dark left">Estou de acordo com os termos e condições</label>
+                      </div>
+
+
                       <div class="s-12 m-12 l-4"><button class="color-btn" type="submit">ENVIAR</button></div>
+                      <input name="budgetType" value="30" type="hidden" />          
+                      <input name="budgetDomain" value="" type="hidden" />    
                     </form>
                   </div>     
-                  
+                  <div class="s-12 m-12 l-1 margin-bottom"></div>
                   <div class="s-12 m-12 l-12 hide-m hide-s margin-bottom">
                     <img src="img/logo.png" alt="" class="center" style="height: 10em;">
                   </div>
@@ -358,44 +427,123 @@
    
       <!-- FOOTER -->
       <footer>
-         <div class="line">
-            <div class="s-12 l-6">
-               <p>Todos os direitos reservados.</p>
+
+        <div class="size-960">
+          <div class="line">
+            <div class="s-12 l-4">
+              <p>Todos os direitos reservados®.</p>
             </div>
-            <div class="s-12 l-6">
-               <a class="right" href="//www.orcseven.com" title="Elaborado por orcseven Soluções IT [2018]. ">Elaborado por orcseven Soluções IT [2018]. </a>
+            <div class="s-12 l-4">
+              <div class="margin box" style="background-color: transparent;">
+                <div class="s-12">
+                  <a href="/terms.html" target="_blank" class="policy">Termos e Condições</a>
+                </div>
+                <div class="s-12">
+                  <a href="/rgpd.html" target="_blank" class="policy">Declaração de proteção de dados</a>
+                </div>
+                <div class="s-12">
+                  <a href="/cookiepolicy.html" target="_blank" class="policy">Política de Cookies</a>
+                </div>
+              </div>
             </div>
-         </div>
+        
+            <div class="s-12 l-4">
+              <a class="right" href="//www.orcseven.com" title="Elaborado por orcseven Soluções IT [2018]. ">Elaborado por orcseven Soluções IT [2018]. </a>
+            </div>
+          </div>
+        </div>
+         
       </footer>
+      <script type="text/javascript" src="js/responsee.js"></script>
       <script type="text/javascript" src="owl-carousel/owl.carousel.js"></script>
+      <script src="js/axios.min.js"></script>
+      <script src="js/orcservices.js"></script>
       <script type="text/javascript">
          jQuery(document).ready(function($) {
-            var theme_slider = $("#owl-demo");
-            $("#owl-demo").owlCarousel({
-                navigation: false,
-                slideSpeed: 300,
-                paginationSpeed: 400,
-                autoPlay: 6000,
-                addClassActive: true,
-             // transitionStyle: "fade",
-                singleItem: true
+          var theme_slider = $("#owl-demo");
+            var owl = $('#owl-demo');
+            owl.owlCarousel({
+              nav: false,
+              dots: true,
+              items: 1,
+              loop: true,
+              autoplay: true,
+              autoplayTimeout: 6000,
+              margin:10,
+              autoHeight:true
             });
-            $("#owl-demo2").owlCarousel({
-                slideSpeed: 300,
-                autoPlay: true,
-                navigation: true,
-                navigationText: ["&#xf007","&#xf006"],
-                pagination: false,
-                singleItem: true
+            var owl = $('#owl-demo2');
+            owl.owlCarousel({
+              nav: false,
+              dots: false,
+              items: 1,
+              loop: true,
+              navText: ["&#xf007","&#xf006"],
+              autoplay: true,
+              autoplayTimeout: 4000,
+              margin:10,
+              autoHeight:true
             });
         
             // Custom Navigation Events
             $(".next-arrow").click(function() {
-                theme_slider.trigger('owl.next');
+                theme_slider.trigger('next.owl');
             })
             $(".prev-arrow").click(function() {
-                theme_slider.trigger('owl.prev');
-            })     
+                theme_slider.trigger('prev.owl');
+            })          
+
+            let currentForm = null;
+
+            $("form").submit(function(e){
+                e.preventDefault();
+                $('.form_message_callback').hide()
+                $('.form_message_support').hide()
+                
+                if (e.currentTarget.hasAttribute('id')) {
+                  currentForm = e.currentTarget
+
+                  let formData = $(currentForm).serializeArray().map(function(x){this[x.name] = x.value; return this;}.bind({}))[0]
+                    formData['budgetDomain'] = window.location.hostname
+
+                    let params = {
+                        REQ_CONTEX:996699,
+                        REQ_ACTION:1000,
+                        REQ_INPUTS: formData
+                    }
+
+                    httpRequestApi('post', params).then(function(res){
+                      
+                      if (res.data.iook){
+                        let boxTarget = null
+                        if (e.currentTarget.id === 'formCallBack') {
+                          boxTarget = '.form_message_callback'
+                        } else if (e.currentTarget.id === 'formSupport') {
+                          boxTarget = '.form_message_support'
+                        } else {
+                          //default
+                        }
+                        if (boxTarget) {
+                          $(boxTarget).find('div.box').empty()
+                          $(boxTarget).find('div.box').text(res.data.success)
+                          $(boxTarget).show()
+                          currentForm.reset()
+                        }
+                      } else {
+                        alert(res.data.error)
+                      }
+                    }).catch(function(err){
+                        if (err && err.response) {
+                            alert(err.response.data.error);
+                        } else {
+                            alert('Ocorreu um erro desconhecido. Tente mais tarde.');
+                        }
+                    });
+
+                  
+                }
+                return false
+            });
         }); 
       </script>
       </div>
