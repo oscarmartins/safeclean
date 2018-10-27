@@ -192,15 +192,17 @@ window.cookieconsent.initialise({
    
                <div class="line">
                    <h2 class="section-title">O seu orçamento à sua medida</h2>
-                   <h4 class="hide-s" style="text-align: center">Solicite um orçamento GRÁTIS e SEM COMPROMISSO</h4>
+                   <h4 id="budgetSubTitle" class="hide-s" style="text-align: center;">Solicite um orçamento GRÁTIS e SEM COMPROMISSO</h4>
                    <div class="line" id="budgetSuccess" >
                            <div class="margin">
-                                <div class="s-4 center">
+                                <div class="s-9 m-6 l-3 "><a class="white-btn success-btn" href="/">Ir para página inicial</a></div>
+                                <div class="s-12 m-9 l-5 ">
                                     <section>
                                             <h5 id="budgetSuccessMsg">O seu orçamento foi submetido com sucesso. Obrigado pela sua preferência. </h5>
                                             <img src="img/gmailsent.png" alt="img/gmailsent.png" />                                       
                                     </section>
                                     </div>
+                                    
                            </div>
                        </div>
                    <form class="customform" action="" id="budgetForm">
@@ -508,6 +510,8 @@ window.cookieconsent.initialise({
                 httpRequestApi('post', params).then(function(res){
                     if (res.data.iook) {
                         $('#budgetForm').hide();
+                        $('#budgetSubTitle').hide();
+                        $('#budgetSubTitle').removeClass('hide-s');
                         $('#budgetSuccessMsg').text(res.data.success);
                         $('#budgetSuccess').show();
                     } else {

@@ -658,3 +658,11 @@ a.policy{
 	color: green!important;
     font-weight: bold;
 }
+
+body {
+    background: url(../img/imgbg.png) no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    opacity: 0.95;
+}
