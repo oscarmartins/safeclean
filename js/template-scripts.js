@@ -1,7 +1,7 @@
 function updTopbar () {
     var imglogo = $('img.logo').height();
     $('img.logo').css('min-height','56px');
-    $('img.logo').css('max-height','128px');
+    $('img.logo').css('max-height','62px');
    /**
     if (imglogo >= 61) {
       $('img.logo').css('height', imglogo - 4);
@@ -12,10 +12,16 @@ function updTopbar () {
     }
 **/
     var st = $(window).scrollTop()
-    if (st >= 160) {
+    if (st >= 180) {
         $('img.logo').css('height', '56px');
     } else {
-        $('img.logo').css('height', '128px');
+        if (st == 0) {
+            $('img.logo').css('height', '');
+            $('img.logo').css('max-height','');
+        } else {
+            $('img.logo').css('height', '62px');
+        }
+        
     }
         
 

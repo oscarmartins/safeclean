@@ -165,15 +165,20 @@ window.cookieconsent.initialise({
             </div> 
             <nav>
                <div class="line">
-                  <div class="s-12 l-3">
-                     <a href="index.html" class="logo">
-                       <img src="img/logo.png" alt="safeclean" class="logo center exp-brand">
-                     </a>
-                  </div>
+                    <div style="position: absolute;right: 0;" class="hide-s hide-m">
+                            <a href="index.html" class="logo">
+                              <img src="img/safepremium.png" alt="safePREMIUM" class="logo center exp-brand">
+                            </a>
+                         </div>
+                   <div class="s-12 l-2">
+                      <a href="index.html" class="logo">
+                        <img src="img/logo.png" alt="safeclean" class="logo center exp-brand">
+                      </a>
+                   </div>
                   
                   <div class="top-nav s-12 l-9">
                      <p class="nav-text">menu</p>
-                     <ul class="right">
+                     <ul class="center">
                         <li><a href="/index.html">Home</a></li>
                         <li><a href="/#about-us">Empresa</a></li>
                         <li><a href="/#features">Metodologia</a></li>
@@ -563,15 +568,20 @@ window.cookieconsent.initialise({
             }
             $('body').scroll(function () {
                 
-                 var imglogo = $('img.logo').height();
-
-                 if (imglogo >= 61) {
-                     $('img.logo').css('height', imglogo - 6);
-                 } else {
-                     if ($(this).scrollTop() <= 30) {
-                         $('img.logo').css('height', '117px');
-                     }
-                 }
+                $('img.logo').css('min-height','56px');
+                $('img.logo').css('max-height','62px');
+                var st = $(window).scrollTop();
+                if (st >= 50) {
+                    $('img.logo').css('height', '56px');
+                } else {
+                    if (st == 0) {
+                        $('img.logo').css('height', '');
+                        $('img.logo').css('max-height','');
+                    } else {
+                        $('img.logo').css('height', '62px');
+                    }
+                    
+                }
              });
 
         }); 
